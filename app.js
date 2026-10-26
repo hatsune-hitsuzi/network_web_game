@@ -19,7 +19,7 @@
   function nextMarket() {
     state.lastPrice = state.price; state.base = Math.random() * 0.2 - 0.1;
     let event = null;
-    if (state.price < 510) event = { type: 'positive', text: C.positiveFallback, effect: 0.08 };
+    if (state.price < 510) event = { type: 'positive', text: C.positiveFallback, effect: C.positiveFallbackEffect };
     else if (Math.random() < 0.3) event = C.events[Math.floor(Math.random() * C.events.length)];
     state.event = event; state.eventEffect = event?.effect || 0;
     const open = state.price; const close = Math.min(720, Math.max(480, open * (1 + state.base + state.eventEffect)));

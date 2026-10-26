@@ -9,12 +9,13 @@ const gameConfig = {
     sad: 'assets/kurumi-reactions.png'
   },
   events: [
-    { id: 1, type: 'positive', text: { zh: '某头部主播带货令和米，需求大增！', en: 'A mega streamer starts selling Reiwa rice. Demand explodes!', ja: '人気配信者が令和米を爆売り。需要が爆発！' }, effect: 0.08 },
-    { id: 2, type: 'negative', text: { zh: '惊爆！新一批令和米被查出含有奇怪添加剂！', en: 'Breaking: a batch of Reiwa rice has a suspicious additive!', ja: '衝撃！令和米から謎の添加物が検出！' }, effect: -0.07 },
-    { id: 3, type: 'positive', text: { zh: '米饭节开幕，大家突然都想吃一碗！', en: 'Rice Festival opens. Everyone suddenly wants a bowl!', ja: 'お米フェス開幕。みんな急に一杯食べたくなる！' }, effect: 0.05 },
-    { id: 4, type: 'negative', text: { zh: '仓库闹鼠灾，米袋的尊严正在消失……', en: 'A warehouse rat incident is eating away at rice bag dignity…', ja: '倉庫でネズミ騒ぎ。米袋の尊厳が消えていく…' }, effect: -0.05 }
+    { id: 1, type: 'positive', text: { zh: '某头部主播带货令和米，需求大增！', en: 'A mega streamer starts selling Reiwa rice. Demand explodes!', ja: '人気配信者が令和米を爆売り。需要が爆発！' }, effect: 0.12 },
+    { id: 2, type: 'negative', text: { zh: '惊爆！新一批令和米被查出含有奇怪添加剂！', en: 'Breaking: a batch of Reiwa rice has a suspicious additive!', ja: '衝撃！令和米から謎の添加物が検出！' }, effect: -0.11 },
+    { id: 3, type: 'positive', text: { zh: '米饭节开幕，大家突然都想吃一碗！', en: 'Rice Festival opens. Everyone suddenly wants a bowl!', ja: 'お米フェス開幕。みんな急に一杯食べたくなる！' }, effect: 0.09 },
+    { id: 4, type: 'negative', text: { zh: '仓库闹鼠灾，米袋的尊严正在消失……', en: 'A warehouse rat incident is eating away at rice bag dignity…', ja: '倉庫でネズミ騒ぎ。米袋の尊厳が消えていく…' }, effect: -0.09 }
   ],
   positiveFallback: { zh: '农协突然发来神秘补贴，米价起飞！', en: 'A mysterious subsidy arrives. Rice prices launch!', ja: '農協から謎の補助金。米価が急上昇！' },
+  positiveFallbackEffect: 0.12,
   warningText: { zh: '⚠️ 农协查账大队还有 3 天就到了哦，请尽快卖出手上的大米吧！ ⚠️', en: '⚠️ The Rice Audit Squad arrives in 3 days. Sell your stock! ⚠️', ja: '⚠️ 米監査隊があと3日で到着。早く米を売って！ ⚠️' },
   labels: {
     zh: { start: '开始炒米', skip: '跳过漫画', buyAll: '全仓买入', sellAll: '全仓卖出', custom: '自定义买 / 卖', next: '进入下一天', cash: '现金', rice: '库存', price: '现价', day: '第', days: '天', market: '米市盘面', event: '今日突发', noEvent: '今天风平浪静……', quantity: '数量 (kg)', buy: '买入', sell: '卖出', end: '结算结果', restart: '再炒一局', initial: '初始资金', final: '最终现金', low: '低价', high: '高价', crash: '持仓归零：大米烂在仓库里。', hero: '不要问', heroAccent: '米价。', live: '实盘', netWorth: '总资产', vol: '波动', priceImpact: '价格影响', noSignal: '无信号 / 无仁慈', happyEffect: '起飞！！', sadEffect: '我为什么要捂？！', comicNote: '一位普通少女，一仓库不普通的米，以及一个绝对不普通的价格曲线。', stockValue: '库存金额', tradeNow: '现在交易', autoNext: '交易后请手动推进', idleNext: '不操作不会自动换日' },
