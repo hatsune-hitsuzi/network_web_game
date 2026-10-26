@@ -13,9 +13,16 @@
 
   function renderIntro() {
     document.querySelector('#app').innerHTML = `<section class="comic" id="comic">${C.comicImages.map((image, index) => `<div class="comic-panel" style="background-image:url('${image}');background-size:cover;background-position:center;animation-delay:${index * 3.8}s"></div>`).join('')}<button class="comic-skip" id="skip" aria-label="${t('skip')}">×</button></section>`;
-    $('#skip').onclick = enterGame; introTimer = setTimeout(enterGame, 11200);
+    $('#skip').onclick = renderRules; introTimer = setTimeout(renderRules, 11200);
   }
-  function enterGame() { clearTimeout(introTimer); $('#comic')?.classList.add('exiting'); setTimeout(() => { state.phase = 'game'; renderGame(true); }, 600); }
+  function renderRules() {
+    clearTimeout(introTimer);
+    const rules = C.rules[lang];
+    document.querySelector('#app').innerHTML = `<main class="rules"><section class="rules-card"><div class="rules-mark">¥</div><div class="lang">${['zh', 'en', 'ja'].map((item) => `<button class="${lang === item ? 'active' : ''}" data-rule-lang="${item}">${item.toUpperCase()}</button>`).join('')}</div><p class="eyebrow">${C.title}</p><h1>${rules.title}</h1><div class="rules-list">${rules.body.map((line) => `<p>${line}</p>`).join('')}</div><button class="rules-start" id="start-game">${rules.start} →</button></section></main>`;
+    document.querySelectorAll('[data-rule-lang]').forEach((button) => { button.onclick = () => { lang = button.dataset.ruleLang; renderRules(); }; });
+    $('#start-game').onclick = enterGame;
+  }
+  function enterGame() { state.phase = 'game'; renderGame(true); }
   function nextMarket() {
     state.lastPrice = state.price; state.base = Math.random() * 0.2 - 0.1;
     let event = null;

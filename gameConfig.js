@@ -4,6 +4,11 @@ const gameConfig = {
   comicImages: ['assets/kurumi-intro-wide-1.png', 'assets/kurumi-intro-wide-2.png', 'assets/kurumi-intro-wide-3.png'],
   comicPositions: ['center', 'center', 'center'],
   tradePercentages: [10, 25, 50, 75, 100],
+  rules: {
+    zh: { title: '米市生存规则', body: ['初始资金：¥1,000,000', '每天米价随机波动，特殊事件会放大涨跌。', '可以买入或卖出大米，也可以什么都不做。', '第 14 天结束时，只结算手上的现金；库存大米全部归零。'], start: '开始炒米' },
+    en: { title: 'RICE MARKET RULES', body: ['Starting cash: ¥1,000,000', 'Rice prices move daily. Special events amplify the swing.', 'Buy, sell, or do nothing before advancing the day.', 'At the end of Day 14, only cash counts. Unsold rice becomes worthless.'], start: 'START TRADING' },
+    ja: { title: '米市場サバイバル規則', body: ['初期資金：¥1,000,000', '米価は毎日変動し、イベントで値動きが大きくなります。', '買う、売る、何もしないを選んでから次の日へ進みます。', '14日目の終了時は現金だけを清算し、在庫米は無価値になります。'], start: '米取引スタート' }
+  },
   expressions: {
     happy: 'assets/kurumi-reactions.png',
     sad: 'assets/kurumi-reactions.png'
