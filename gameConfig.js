@@ -1,6 +1,6 @@
 const gameConfig = {
-  title: '韭留美炒米记',
-  subtitle: 'BEAT THE RICE MARKET',
+  title: { zh: '韭留美炒米记', en: 'KURUMI\'S RICE TRADING', ja: '久留美の米取引記' },
+  subtitle: { zh: '令和米市场生存战', en: 'BEAT THE RICE MARKET', ja: '令和米市場サバイバル' },
   comicImages: ['assets/kurumi-intro-wide-1.png', 'assets/kurumi-intro-wide-2.png', 'assets/kurumi-intro-wide-3.png'],
   comicPositions: ['center', 'center', 'center'],
   tradePercentages: [10, 25, 50, 75, 100],
