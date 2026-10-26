@@ -10,8 +10,8 @@ const gameConfig = {
     ja: { title: '米市場サバイバル規則', body: ['初期資金：¥1,000,000', '米価は毎日変動し、イベントで値動きが大きくなります。', '買う、売る、何もしないを選んでから次の日へ進みます。', '14日目の終了時は現金だけを清算し、在庫米は無価値になります。'], start: '米取引スタート' }
   },
   expressions: {
-    happy: 'assets/kurumi-reactions.png',
-    sad: 'assets/kurumi-reactions.png'
+    happy: { src: 'assets/kurumi-reactions.png', position: 'left center' },
+    sad: { src: 'assets/kurumi-reactions.png', position: 'right center' }
   },
   events: [
     { id: 1, type: 'positive', text: { zh: '某头部主播带货令和米，需求大增！', en: 'A mega streamer starts selling Reiwa rice. Demand explodes!', ja: '人気配信者が令和米を爆売り。需要が爆発！' }, effect: 0.12 },
