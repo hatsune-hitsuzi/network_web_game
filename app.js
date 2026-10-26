@@ -37,7 +37,7 @@
     const polyline = points.map((point) => `${point.x},${point.y}`).join(' ');
     const dots = points.map((point, index) => `<circle cx="${point.x}" cy="${point.y}" r="${index === points.length - 1 ? 1.8 : 1.15}" class="${point.close >= (state.candles[index].open) ? 'line-up' : 'line-down'}"></circle>`).join('');
     const labels = Array.from({ length: 14 }, (_, index) => `<span>${index < state.candles.length ? `D${index + 1}` : '·'}</span>`).join('');
-    return `<div class="line-grid"><span>¥720</span><span>¥600</span><span>¥480</span></div><svg class="line-chart" viewBox="0 0 100 100" preserveAspectRatio="none" aria-label="${t('market')} line chart"><polyline points="${polyline}" class="price-line"></polyline>${dots}</svg><div class="line-days">${labels}</div>`;
+    return `<div class="line-grid"><span>¥720</span><span>¥660</span><span>¥600</span><span>¥540</span><span>¥480</span></div><svg class="line-chart" viewBox="0 0 100 100" preserveAspectRatio="none" aria-label="${t('market')} line chart"><polyline points="${polyline}" class="price-line"></polyline>${dots}</svg><div class="line-days">${labels}</div>`;
   }
   function renderGame(advance = true) {
     if (advance) nextMarket();
